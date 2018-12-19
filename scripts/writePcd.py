@@ -2,8 +2,8 @@ import cv2
 import numpy as np
 from open3d import *
 
-DEPTH_IMG_PATH = "../depth/"
-NORMAL_IMG_PATH = "../normal/"
+DEPTH_IMG_PATH = "../dataset/dataset1/bike_bicycle[5]/1/depth/"
+NORMAL_IMG_PATH = "../dataset/dataset1/bike_bicycle[5]/1/normal/"
 WIDTH = 2048
 HEIGHT = 63 #64
 LIDAR_HEIGHT = 1.4
@@ -31,6 +31,9 @@ if __name__ == "__main__":
                         xyz[h * WIDTH + w, 2] = r * np.sin(phi)
         pcd = PointCloud()
         pcd.points = Vector3dVector(xyz)
-        pcdFile = "../pcd/" + str(i) + ".pcd"
+        voxel_down_pcd = voxel_down_sample(pcd, voxel_size = 0.02)
+        cl,ind = statistical_outlier_removal(voxel_down_pcd, nb_neighbors=20, std_ratio=2.0)
+        inlier_cloud = select_down_sample(voxel_down_pcd, ind)
+        pcdFile = "../pcd/" + str(picNum) + ".pcd"
         print("Write PCD : " + pcdFile)
-        write_point_cloud(pcdFile, pcd)
+        write_point_cloud(pcdFile, inlier_cloud)

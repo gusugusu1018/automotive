@@ -2,8 +2,8 @@ import cv2
 import numpy as np
 from open3d import *
 
-DEPTH_IMG_PATH = "../depth/"
-NORMAL_IMG_PATH = "../normal/"
+DEPTH_IMG_PATH = "../dataset/dataset1/bike_bicycle[5]/1/depth/"
+NORMAL_IMG_PATH = "../dataset/dataset1/bike_bicycle[5]/1/normal/"
 WIDTH = 2048
 HEIGHT = 63 #64
 LIDAR_HEIGHT = 1.4

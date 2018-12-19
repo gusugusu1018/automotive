@@ -5,7 +5,7 @@ project(depth2PointCloud)
 
 set(CMAKE_CXX_FLAGS "-std=c++11")
 find_package(PCL 1.2 REQUIRED)
-find_package(OpenCV 3.4 REQUIRED)
+find_package(OpenCV 3.3 REQUIRED)
 
 include_directories(${PCL_INCLUDE_DIRS})
 link_directories(${PCL_LIBRARY_DIRS})
