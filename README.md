@@ -4,8 +4,10 @@
 * opencv-python (python 3.6.7)
 * pcl(1.9)
 * opencv(3.3.0)
+* ffmpeg - video maker
+* totem - video viewer
 
-# Python environment using pyenv virtualenv
+## Python environment using pyenv virtualenv
 ```
 pyenv install 3.6.7
 pyenv virtual env 3.6.7 toyota
@@ -15,7 +17,7 @@ pip install open3d-python
 pip install opencv-python
 ```
 
-# pcl-1.9 from src
+## pcl-1.9 from src
 
 ```
 sudo apt update
@@ -42,7 +44,7 @@ cmake-gui ../
 make -j8
 ```
 
-# opencv 3.3.0 from src
+## opencv 3.3.0 from src
 
 ```
 sudo apt-get install cmake libeigen3-dev libgtk-3-dev qt5-default freeglut3-dev libvtk6-qt-dev libtbb-dev ffmpeg libdc1394-22-dev libavcodec-dev libavformat-dev libswscale-dev libjpeg-dev libjasper-dev lib
@@ -64,3 +66,4 @@ D WITH_QT=ON -D WITH_TBB=ON -D WITH_TIFF=ON -D WITH_UNICAP=OFF -D WITH_V4L=OFF -
 make -j8
 sudo make install
 ```
+

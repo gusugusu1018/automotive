@@ -1,2 +1,5 @@
 dataset
 pcd
+*.pcd
+*.mp4
+*.png
