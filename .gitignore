@@ -1,5 +1,5 @@
 dataset
-pcd
+build
 *.pcd
 *.mp4
 *.png

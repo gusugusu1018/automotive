@@ -1,0 +1,3 @@
+/home/sv05/Projects/automotive/cv/write/build/CMakeFiles/edit_cache.dir
+/home/sv05/Projects/automotive/cv/write/build/CMakeFiles/rebuild_cache.dir
+/home/sv05/Projects/automotive/cv/write/build/CMakeFiles/write.dir
